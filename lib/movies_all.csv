@@ -1,0 +1,107 @@
+Group,Order,Movie,Year,File Name,Duration,Watched,IMDB Rating,Size,Size in GB
+1,1,Flashbacks of a Fool,2008,Flashbacks of a Fool [2008].avi,1:45:00,TRUE,6.8,733493248,0.68
+1,2,The Vicious Kind,2009,The Vicious Kind [2009].avi,1:34:00,TRUE,6.9,734357504,0.68
+1,3,A Simple Plan,1998,A Simple Plan [1998].mkv,2:01:00,TRUE,7.5,1110114304,1.03
+1,4,Flesh + Blood,1985,Flesh + Blood [1985].mkv,2:06:00,TRUE,6.7,1117847552,1.04
+1,5,Raising Arizona,1987,Raising Arizona [1987].mp4,1:34:00,TRUE,7.3,1647764083,1.53
+1,6,Barton Fink,1991,Barton Fink [1991].avi,1:56:00,TRUE,7.6,733450240,0.68
+1,7,Green Room,2015,Green Room [2015].avi,1:35:00,TRUE,7.0,734126080,0.68
+1,8,Kairo,2001,Kairo [2001].mkv,1:58:00,TRUE,6.5,1552384629,1.45
+1,9,Branded,2012,Branded [2012].mp4,1:46:00,TRUE,4.6,1604596450,1.49
+1,10,Nocturnal Animals,2016,Nocturnal Animals [2016].mkv,1:56:00,TRUE,7.5,948713766,0.88
+1,11,Sweet November,2001,Sweet November [2001].avi,1:59:00,FALSE,6.7,1466617856,1.37
+1,12,Love Story,1970,Love Story [1970].avi,1:39:00,FALSE,6.9,730814802,0.68
+1,13,Rust And Bone,2012,Rust And Bone [2012].mp4,2:00:00,TRUE,7.4,1291791817,1.20
+1,14,Horns,2013,Horns [2013].avi,2:03:00,TRUE,6.4,1472747420,1.37
+1,15,Sicario,2015,Sicario [2015].mkv,2:01:00,TRUE,7.7,1044510845,0.97
+1,16,Take Shelter,2011,Take Shelter [2011].mp4,2:01:00,TRUE,7.3,788275152,0.73
+2,1,A Monster Calls,2016,A Monster Calls [2016].mkv,1:48:00,FALSE,7.4,2682971743,2.50
+2,2,A Walk in the Clouds,1995,A Walk in the Clouds [1995].avi,1:42:00,FALSE,6.7,1265352950,1.18
+2,3,Altered States,1980,Altered States [1980].mp4,1:42:00,FALSE,6.9,839632939,0.78
+2,4,Bitter Moon,1992,Bitter Moon [1992].mp4,2:19:00,FALSE,6.9,975584311,0.91
+2,5,Bubba Ho - Tep,2002,Bubba Ho - Tep [2002].avi,1:32:00,TRUE,7.2,735025152,0.68
+2,6,Cloak and Dagger,1984,Cloak and Dagger [1984].mkv,1:41:00,FALSE,6.5,1580403151,1.47
+2,7,Fantastic Planet,1973,Fantastic Planet [1973].mkv,1:12:00,FALSE,7.7,1190640575,1.11
+2,8,Pride And Prejudice,2005,Pride And Prejudice [2005].mkv,2:07:00,FALSE,7.8,1186533975,1.11
+2,9,Russian Ark,2002,Russian Ark [2002].mp4,1:39:00,FALSE,7.2,829610762,0.77
+2,10,Shutter Island,2010,Shutter Island [2010].mp4,2:18:00,FALSE,8.2,1513847775,1.41
+2,11,Starman,1984,Starman [1984].avi,1:55:00,FALSE,7.0,737175552,0.69
+2,12,The Lords of Flatbush,1974,The Lords of Flatbush [1974].avi,1:26:00,TRUE,5.6,729384960,0.68
+2,13,The Pelican Brief,1993,The Pelican Brief [1993].mkv,2:21:00,FALSE,6.6,734666620,0.68
+2,14,The Sea Of Trees,2015,The Sea Of Trees [2015].mp4,1:50:00,FALSE,6.1,816813007,0.76
+2,15,The Way Of The Gun,2000,The Way Of The Gun [2000].avi,1:59:00,FALSE,6.6,734285824,0.68
+3,1,A Boy and His Dog,1975,A Boy and His Dog [1975].avi,1:31:00,FALSE,6.4,735261618,0.68
+3,2,A Pigeon Sat on a Branch Reflecting on Existence,2014,A Pigeon Sat on a Branch Reflecting on Existence [2014].mkv,1:41:00,FALSE,6.9,1980947679,1.84
+3,3,American Pop,1981,American Pop [1981].avi,1:36:00,FALSE,7.1,733913088,0.68
+3,4,Autumn Sonata,1978,Autumn Sonata [1978].mp4,1:39:00,FALSE,8.1,1661332270,1.55
+3,5,Boogie Nights,1997,Boogie Nights [1997].mkv,2:35:00,FALSE,7.9,733512550,0.68
+3,6,Breakfast at Tiffany's,1961,Breakfast at Tiffany's [1961].mp4,1:55:00,FALSE,7.6,948761457,0.88
+3,7,Breaking the Waves,1996,Breaking the Waves [1996].mp4,2:39:00,FALSE,7.8,1038767903,0.97
+3,8,Brotherhood of The Wolf,2001,Brotherhood of The Wolf [2001].mp4,2:22:00,FALSE,7.0,938703621,0.87
+3,9,Bye Bye Birdie,1963,Bye Bye Birdie [1963].avi,1:52:00,FALSE,6.6,729245696,0.68
+3,10,Cloak and Dagger,1946,Cloak and Dagger [1946].mkv,1:46:00,FALSE,6.6,1235521630,1.15
+3,11,Dancer in the Dark,2000,Dancer in the Dark [2000].mp4,2:20:00,FALSE,7.9,2456204926,2.29
+3,12,Escape from Sobibor,1987,Escape from Sobibor [1987].mp4,2:23:00,FALSE,7.3,518972917,0.48
+3,13,House of Sand and Fog,2003,House of Sand and Fog [2003].mkv,2:06:00,FALSE,7.5,785543143,0.73
+3,14,In a Valley of Violence,2016,In a Valley of Violence [2016].avi,1:44:00,FALSE,6.1,732743024,0.68
+3,15,Midnight Cowboy,1969,Midnight Cowboy [1969].mp4,1:53:00,FALSE,7.8,733008568,0.68
+4,1,Broken Flowers,2005,Broken Flowers[2005].avi,1:46:00,FALSE,7.2,735252480,0.68
+4,2,Coraline,2009,Coraline [2009].mp4,1:55:00,FALSE,7.7,1865668705,1.74
+4,3,Damage,1992,Damage [1992].mkv,1:51:00,FALSE,6.7,753391493,0.70
+4,4,Day for Night,1973,Day for Night [1973].avi,1:55:00,FALSE,8.0,732983296,0.68
+4,5,Erin Brockovich,2000,Erin Brockovich (2000).mkv,2:11:00,FALSE,7.4,735065714,0.68
+4,6,Gamer,2009,Gamer [2009].mp4,1:35:00,TRUE,5.7,682873681,0.64
+4,7,In Bruges,2008,In Bruges [2008].mp4,1:47:00,FALSE,7.9,683419281,0.64
+4,8,The Big Sick,2017,The Big Sick [2017].avi,2:00:00,FALSE,7.5,1494695518,1.39
+4,9,The Hidden Fortress,1958,The Hidden Fortress [1958].m4v,2:19:00,FALSE,8.1,1440237185,1.34
+4,10,The King of Comedy,1982,The King of Comedy [1982].mp4,1:49:00,FALSE,7.8,1771999988,1.65
+4,11,The Lost Boys,1987,The Lost Boys [1987].mp4,1:37:00,FALSE,7.2,792647207,0.74
+4,12,The Neon Demon,2016,The Neon Demon [2016].avi,1:58:00,FALSE,6.1,732837032,0.68
+4,13,Timecrimes,2007,Timecrimes [2007].mkv,1:32:00,FALSE,7.1,718263009,0.67
+4,14,Titus,1999,Titus [1999].mkv,2:42:00,FALSE,7.1,1197546988,1.12
+4,15,Zero Dark Thirty,2012,Zero Dark Thirty [2012].mp4,2:37:00,FALSE,7.4,1074343734,1.00
+5,1,Boyhood,2014,Boyhood [2014].mp4,2:43:00,FALSE,7.9,1047131753,0.98
+5,2,Children of Men,2006,Children of Men [2006].mp4,1:49:00,FALSE,7.9,1612825757,1.50
+5,3,Contagion,2011,Contagion [2011].mp4,1:46:00,FALSE,6.8,684266570,0.64
+5,4,Dirty Rotten Scoundrels,1998,Dirty Rotten Scoundrels [1998].mp4,1:50:00,TRUE,7.4,1564954489,1.46
+5,5,Mistress America,2015,Mistress America [2015].mp4,1:24:00,FALSE,6.7,694470350,0.65
+5,6,Moonstruck,1987,Moonstruck [1987].mkv,1:42:00,FALSE,7.1,631782328,0.59
+5,7,Rear Window,1954,Rear Window [1954].mkv,1:52:00,FALSE,8.5,1162724679,1.08
+5,8,Shampoo,1975,Shampoo [1975].mkv,1:49:00,FALSE,6.4,1918692500,1.79
+5,9,Silence,2016,Silence [2016].mp4,2:41:00,FALSE,7.2,1264970695,1.18
+5,10,Songs From the Second Floor,2000,Songs From the Second Floor [2000].avi,1:40:00,FALSE,7.5,950314732,0.89
+5,11,The Bad and The Beautiful,1952,The Bad and The Beautiful [1952].mkv,1:58:00,FALSE,7.8,4128076907,3.84
+5,12,The City Of Lost Children,1995,The City Of Lost Children (1995)A.avi,1:52:00,FALSE,7.5,734904320,0.68
+5,13,The Game,1997,The Game [1997].mp4,2:09:00,FALSE,7.7,917552819,0.85
+5,14,The Guard,2011,The Guard [2011].mp4,1:36:00,FALSE,7.3,671946016,0.63
+5,15,Freaks,1932,Freaks [1932].mkv,1:04:00,FALSE,7.8,1981338836,1.85
+6,1,Delicatessen,1991,Delicatessen [1991].mp4,1:39:00,FALSE,7.5,1841552385,1.72
+6,2,Fanny and och Alexander,1982,Fanny and och Alexander [1982].mkv,5:12:00,FALSE,8.1,756275707,0.70
+6,3,In The Name Of The Father,1993,In The Name Of The Father [1993].mp4,2:13:00,FALSE,8.1,768316823,0.72
+6,4,Murder by Death,1976,Murder by Death [1976].avi,1:34:00,FALSE,7.3,562209280,0.52
+6,5,Phantom of the Opera,1925,Phantom of the Opera [1925].mp4,1:47:00,FALSE,7.5,463554725,0.43
+6,6,Stereo,1969,Stereo [1969].mp4,1:05:00,FALSE,5.1,727906826,0.68
+6,7,Swimming Pool,2003,Swimming Pool [2003].mkv,1:39:00,FALSE,6.7,1127192189,1.05
+6,8,Tetro,2009,Tetro [2009].avi,2:07:00,FALSE,6.8,733943808,0.68
+6,9,The Aerial,2007,The Aerial [2007].avi,1:39:00,FALSE,7.3,1381797888,1.29
+6,10,The Court Jester,1955,The Court Jester (1955).avi,1:41:00,FALSE,7.8,739076096,0.69
+6,11,The English Patient,1996,The English Patient [1996].mp4,2:42:00,FALSE,7.4,1044389734,0.97
+6,12,The Science Of Sleep,2006,The Science Of Sleep [2006].avi,1:46:00,FALSE,7.2,724161388,0.67
+6,13,The Whales Of August,1987,The Whales Of August [1987].mkv,1:30:00,FALSE,7.1,4294967295,4.00
+6,14,Vertigo,1958,Vertigo [1958].mp4,2:08:00,FALSE,8.3,968316434,0.90
+6,15,With Honors,1994,With Honors (1994).avi,1:43:00,FALSE,6.7,733184720,0.68
+7,1,Fiddler On The Roof,1964,Fiddler On The Roof [1964].avi,3:21:00,FALSE,8.0,731998208,0.68
+7,2,Firestarter,1984,Firestarter [1984].mp4,1:54:00,FALSE,6.0,1975327755,1.84
+7,3,How to Steal a Million,1966,How to Steal a Million [1966].avi,2:03:00,FALSE,7.5,561328640,0.52
+7,4,I'm Not There,2007,I'm Not There [2007].mp4,2:15:00,FALSE,6.8,1351290842,1.26
+7,5,In the Heart of the Sea,2015,In the Heart of the Sea [2015].mkv,2:01:00,FALSE,6.9,1046332392,0.97
+7,6,Love,2015,Love [2015].avi,2:10:00,FALSE,6.1,1523615546,1.42
+7,7,Mr. Nobody,2009,Mr. Nobody [2009].mp4,2:18:00,FALSE,7.7,1048991198,0.98
+7,8,The Artist,2011,The Artist [2011].mp4,1:40:00,FALSE,7.9,682527032,0.64
+7,9,The Bridge on the River Kwai,1957,The Bridge on the River Kwai [1957].mp4,2:41:00,FALSE,8.1,1045334516,0.97
+7,10,The Grey,2011,The Grey [2011].mp4,1:57:00,FALSE,6.7,788264442,0.73
+7,11,The Nice Guys,2016,The Nice Guys [2016].avi,1:56:00,FALSE,7.4,732866560,0.68
+7,12,This Must Be the Place,2011,This Must Be the Place [2011].mp4,1:58:00,FALSE,6.7,789078473,0.73
+7,13,Throne of Blood,1957,Throne of Blood (1957).avi,1:50:00,FALSE,8.1,1460660224,1.36
+7,14,Tom and Jerry - The Lost Dragon,2014,Tom and Jerry - The Lost Dragon [2014].mkv,0:57:00,TRUE,5.8,1272624967,1.19
+7,15,Tree Of Life,2011,Tree Of Life (2011).mp4,2:18:00,FALSE,6.8,1516794393,1.41
