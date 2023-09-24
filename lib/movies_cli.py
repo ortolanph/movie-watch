@@ -1,6 +1,6 @@
 import typer
 
-from lib.movie_controller import MovieController
+from lib.movies_controller import MovieController
 
 app = typer.Typer()
 controller = MovieController()

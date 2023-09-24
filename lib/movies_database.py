@@ -1,4 +1,4 @@
-from lib.movie_connection_manager import ConnectionManager
+from lib.movies_connection_manager import ConnectionManager
 from lib.movies_sql import INSERT_MOVIE, SELECT_MOVIES, SELECT_MOVIES_BY_GROUP, \
     SELECT_MOVIES_BY_PATTERN, UPDATE_MOVIE_AS_WATCHED, UPDATE_MOVIE_AS_UNWATCHED
 from lib.movies_utils import extract_row_info
