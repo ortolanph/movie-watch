@@ -1,3 +1,5 @@
+DATABASE_FILE = "movies.sqlite3"
+
 GROUP_LIST_HEADER = '      Id    Group   Movie Id  Movie Name                                                                   Duration  IMDB Rating  Size In GB'
 
 GROUP_LIST_HEADER_SEPARATOR = '--------------------------------------------------------------------------------------------------------------------------------------------'

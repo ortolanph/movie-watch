@@ -1,38 +1,33 @@
 import typer
 
-from lib.movies_database import list_all_movies, setup_database, list_by_group, search_movie_by_pattern, \
-    mark_as_watched_or_unwatched
+from lib.movie_controller import MovieController
 
 app = typer.Typer()
-
-
-@app.command()
-def database_setup():
-    setup_database()
+controller = MovieController()
 
 
 @app.command()
 def list_all():
-    list_all_movies()
+    controller.list_all_movies()
 
 
 @app.command()
 def list_group(group: int):
-    list_by_group(group)
+    controller.list_by_group(group)
 
 
 @app.command()
 def search(pattern: str):
-    search_movie_by_pattern(pattern)
+    controller.search_movie(pattern)
 
 
 @app.command()
 def watched(movie_id: int):
-    mark_as_watched_or_unwatched(movie_id)
+    controller.change_watched_status(movie_id, watched=True)
     print(f"Movie {movie_id} has been marked as watched")
 
 
 @app.command()
-def unwatched(movie_id: int):
-    mark_as_watched_or_unwatched(movie_id, watch_flag=False)
+def unwatch(movie_id: int):
+    controller.change_watched_status(movie_id, watched=False)
     print(f"Movie {movie_id} has been marked as unwatched")
