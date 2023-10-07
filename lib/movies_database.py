@@ -66,8 +66,6 @@ class MovieRepository:
     def change_movie_status(self, movie_pk_id, watched=None):
         statement = UPDATE_MOVIE_AS_WATCHED if watched else UPDATE_MOVIE_AS_UNWATCHED
 
-        print(statement)
-
         self._connection.execute(statement, [movie_pk_id])
         self._connection.commit()
         self._close_connection()

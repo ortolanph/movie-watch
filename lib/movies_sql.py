@@ -5,10 +5,10 @@ CREATE_MOVIES_TABLE = '''create table movie
     movie_name text not null, 
     movie_year int not null, 
     file_name text not null, 
-    duration int, 
-    watched int, 
-    imdb_rating real, 
-    original_size real, 
+    duration int not null, 
+    watched int default 0, 
+    imdb_rating real not null, 
+    original_size real not null, 
     size_in_gb real);'''
 
 INSERT_MOVIE = '''insert into movie (
