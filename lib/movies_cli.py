@@ -22,33 +22,51 @@ def list_group(group: int):
     controller.list_by_group(group)
 
 
-@app.command(short_help="Make a search for a pattern within the movie name")
+@app.command(
+    help="Make a search for a pattern within the movie name",
+    short_help="Make a search for a pattern within the movie name"
+)
 def search(pattern: str):
     controller.search_movie(pattern)
 
 
-@app.command(short_help="Marks a given movie as watched by id.")
+@app.command(
+    help="Marks a given movie as watched by id",
+    short_help="Marks a given movie as watched by id"
+)
 def watched(movie_id: int):
     controller.change_watched_status(movie_id, watched=True)
     print(f"Movie {movie_id} has been marked as watched")
 
 
-@app.command(short_help="Marks a given movie as unwatched by id.")
+@app.command(
+    help="Marks a given movie as unwatched by id",
+    short_help="Marks a given movie as unwatched by id"
+)
 def unwatch(movie_id: int):
     controller.change_watched_status(movie_id, watched=False)
     print(f"Movie {movie_id} has been marked as unwatched")
 
 
-@app.command(short_help="Creates a CSV file of the movies")
+@app.command(
+    help="Creates a CSV file of the movies",
+    short_help="Creates a CSV file of the movies"
+)
 def export_to_csv(csv_file_name: str):
     pass
 
 
-@app.command(short_help="Creates inserts file of the movie table")
+@app.command(
+    help="Creates inserts file of the movie table",
+    short_help="Creates inserts file of the movie table"
+)
 def export_to_inserts(sql_file_name: str):
     pass
 
 
-@app.command(short_help="Inserts a movie from a json file")
+@app.command(
+    help="Inserts a movie from a json file",
+    short_help="Inserts a movie from a json file"
+)
 def insert_movie(movie_file: str):
     pass
