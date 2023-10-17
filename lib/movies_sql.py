@@ -66,3 +66,7 @@ UPDATE_MOVIE_AS_WATCHED = '''update movie
 UPDATE_MOVIE_AS_UNWATCHED = '''update movie 
                                   set watched = 0 
                                 where id = ?;'''
+
+# select coalesce(max(movie_id), 0) as last_id
+#   from movie
+#  where group_id = 8;
