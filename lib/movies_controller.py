@@ -1,3 +1,5 @@
+from art import tprint
+
 from lib.movies_database import MovieRepository
 from lib.movies_reports import MovieReporter
 
@@ -9,6 +11,10 @@ class MovieController:
     def __init__(self):
         self._repository = MovieRepository()
         self._reporter = MovieReporter()
+        self.__banner()
+
+    def __banner(self):
+        tprint("Movies", font="starwars")
 
     def list_all_movies(self):
         all_movies = self._repository.list_all_movies()

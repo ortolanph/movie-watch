@@ -1,3 +1,4 @@
+import emoji
 import typer
 
 from lib.movies_controller import MovieController
@@ -53,7 +54,7 @@ def unwatch(movie_id: int):
     short_help="Creates a CSV file of the movies"
 )
 def export_to_csv(csv_file_name: str):
-    pass
+    print(f'{emoji.emojize(":construction_worker:")} Under Construction {emoji.emojize(":construction_worker:")}')
 
 
 @app.command(
@@ -61,7 +62,7 @@ def export_to_csv(csv_file_name: str):
     short_help="Creates inserts file of the movie table"
 )
 def export_to_inserts(sql_file_name: str):
-    pass
+    print(f'{emoji.emojize(":construction_worker:")} Under Construction {emoji.emojize(":construction_worker:")}')
 
 
 @app.command(
@@ -69,4 +70,12 @@ def export_to_inserts(sql_file_name: str):
     short_help="Inserts a movie from a json file"
 )
 def insert_movie(movie_file: str):
-    pass
+    print(f'{emoji.emojize(":construction_worker:")} Under Construction {emoji.emojize(":construction_worker:")}')
+
+
+@app.command(
+    help="Purges all watched movies",
+    short_help="Purges all watched movies"
+)
+def purge():
+    print(f'{emoji.emojize(":construction_worker:")} Under Construction {emoji.emojize(":construction_worker:")}')
