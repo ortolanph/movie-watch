@@ -37,6 +37,9 @@ class MovieController:
     def change_watched_status(self, movie_id, watched=None):
         self._repository.change_movie_status(movie_id, watched)
 
+    def change_watched_status_gm(self, group_id, movie_id, watched=None):
+        self._repository.change_movie_status_gm(group_id, movie_id, watched)
+
     def export_to_csv(self, csv_file_name):
         all_movies = self._repository.list_all_movies()
         all_movies_formatted = list(map(lambda movie: extract_csv_info(movie), all_movies))

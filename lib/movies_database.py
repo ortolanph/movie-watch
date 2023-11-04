@@ -1,7 +1,8 @@
 from lib.movies_connection_manager import ConnectionManager
 from lib.movies_sql import INSERT_MOVIE, SELECT_MOVIES, SELECT_MOVIES_BY_GROUP, \
-    SELECT_MOVIES_BY_PATTERN, UPDATE_MOVIE_AS_WATCHED, UPDATE_MOVIE_AS_UNWATCHED, SELECT_ALL_FIELDS_MOVIES, \
-    PURGE_WATCHED_MOVIE, LAST_GROUP_ID
+    SELECT_MOVIES_BY_PATTERN, UPDATE_MOVIE_AS_WATCHED_BY_ID, UPDATE_MOVIE_AS_UNWATCHED_BY_ID, SELECT_ALL_FIELDS_MOVIES, \
+    PURGE_WATCHED_MOVIE, LAST_GROUP_ID, UPDATE_MOVIE_AS_WATCHED_BY_GROUP_ID_MOVIE_ID, \
+    UPDATE_MOVIE_AS_UNWATCHED_BY_GROUP_ID_MOVIE_ID
 from lib.movies_utils import extract_row_info, extract_all_fields_info
 
 DATABASE_FILE = "movies.sqlite3"
@@ -64,9 +65,17 @@ class MovieRepository:
         return search_data
 
     def change_movie_status(self, movie_pk_id, watched=None):
-        statement = UPDATE_MOVIE_AS_WATCHED if watched else UPDATE_MOVIE_AS_UNWATCHED
+        statement = UPDATE_MOVIE_AS_WATCHED_BY_ID if watched else UPDATE_MOVIE_AS_UNWATCHED_BY_ID
 
         self._connection.execute(statement, [movie_pk_id])
+        self._connection.commit()
+        self._close_connection()
+
+    def change_movie_status_gm(self, group_id, movie_id, watched):
+        statement = UPDATE_MOVIE_AS_WATCHED_BY_GROUP_ID_MOVIE_ID if watched \
+            else UPDATE_MOVIE_AS_UNWATCHED_BY_GROUP_ID_MOVIE_ID
+
+        self._connection.execute(statement, [group_id, movie_id])
         self._connection.commit()
         self._close_connection()
 

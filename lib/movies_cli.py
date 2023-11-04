@@ -40,12 +40,30 @@ def watched(movie_id: int):
 
 
 @app.command(
+    help="Marks a given movie as watched by group_id and movie_id",
+    short_help="Marks a given movie as watched by group_id and movie_id"
+)
+def watched_gm(group_id: int, movie_id):
+    controller.change_watched_status_gm(group_id, movie_id, watched=True)
+    print(f"Movie {group_id}/{movie_id} has been marked as watched")
+
+
+@app.command(
     help="Marks a given movie as unwatched by id",
     short_help="Marks a given movie as unwatched by id"
 )
 def unwatch(movie_id: int):
     controller.change_watched_status(movie_id, watched=False)
     print(f"Movie {movie_id} has been marked as unwatched")
+
+
+@app.command(
+    help="Marks a given movie as unwatched by group_id and movie_id",
+    short_help="Marks a given movie as unwatched by group_id and movie_id"
+)
+def unwatch_gm(group_id: int, movie_id):
+    controller.change_watched_status_gm(group_id, movie_id, watched=False)
+    print(f"Movie {group_id}/{movie_id}{movie_id} has been marked as unwatched")
 
 
 @app.command(

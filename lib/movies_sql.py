@@ -61,15 +61,15 @@ SELECT_MOVIES_BY_PATTERN = """select watched,
                                where movie_name like ? 
                                order by group_id, movie_id, id;"""
 
-UPDATE_MOVIE_AS_WATCHED = '''update movie 
-                                set watched = 1 
-                              where id = ?;'''
+UPDATE_MOVIE_AS_WATCHED_BY_ID = 'update movie set watched = 1 where id = ?;'
 
-UPDATE_MOVIE_AS_UNWATCHED = '''update movie 
-                                  set watched = 0 
-                                where id = ?;'''
+UPDATE_MOVIE_AS_UNWATCHED_BY_ID = 'update movie set watched = 0 where id = ?;'
 
-PURGE_WATCHED_MOVIE = '''delete from movie where watched = 1'''
+UPDATE_MOVIE_AS_WATCHED_BY_GROUP_ID_MOVIE_ID = 'update movie set watched = 1 where group_id = ? and movie_id = ?;'
+
+UPDATE_MOVIE_AS_UNWATCHED_BY_GROUP_ID_MOVIE_ID = 'update movie set watched = 0 where group_id = ? and movie_id = ?;'
+
+PURGE_WATCHED_MOVIE = 'delete from movie where watched = 1'
 
 LAST_GROUP_ID = '''select coalesce(max(movie_id), 0) as last_id
                      from movie
