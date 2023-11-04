@@ -78,4 +78,4 @@ def insert_movie(movie_file: str):
     short_help="Purges all watched movies"
 )
 def purge():
-    print(f'{emoji.emojize(":construction_worker:")} Under Construction {emoji.emojize(":construction_worker:")}')
+    controller.purge()

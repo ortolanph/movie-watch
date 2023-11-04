@@ -69,6 +69,8 @@ UPDATE_MOVIE_AS_UNWATCHED = '''update movie
                                   set watched = 0 
                                 where id = ?;'''
 
+PURGE_WATCHED_MOVIE = '''delete from movie where watched = 1'''
+
 # select coalesce(max(movie_id), 0) as last_id
 #   from movie
 #  where group_id = 8;

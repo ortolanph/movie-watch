@@ -55,3 +55,6 @@ class MovieController:
 
         with open(sql_file_name, 'w', encoding='UTF8', newline='') as sql_file:
             sql_file.writelines(rendered_sql_file)
+
+    def purge(self):
+        self._repository.purge_watched_movies()

@@ -1,6 +1,7 @@
 from lib.movies_connection_manager import ConnectionManager
 from lib.movies_sql import INSERT_MOVIE, SELECT_MOVIES, SELECT_MOVIES_BY_GROUP, \
-    SELECT_MOVIES_BY_PATTERN, UPDATE_MOVIE_AS_WATCHED, UPDATE_MOVIE_AS_UNWATCHED, SELECT_ALL_FIELDS_MOVIES
+    SELECT_MOVIES_BY_PATTERN, UPDATE_MOVIE_AS_WATCHED, UPDATE_MOVIE_AS_UNWATCHED, SELECT_ALL_FIELDS_MOVIES, \
+    PURGE_WATCHED_MOVIE
 from lib.movies_utils import extract_row_info, extract_all_fields_info
 
 DATABASE_FILE = "movies.sqlite3"
@@ -80,3 +81,8 @@ class MovieRepository:
         self._close_connection()
 
         return movie_data
+
+    def purge_watched_movies(self):
+        self._connection.execute(PURGE_WATCHED_MOVIE)
+        self._connection.commit()
+        self._close_connection()
