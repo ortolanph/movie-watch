@@ -9,3 +9,5 @@ RECORD_FORMAT = '[{:1}]  {:>3}        {:>1}         {:>2}  {:<75}   {:>7} {:>12}
 GROUP_HEADER = 'GROUP {:>3}\n'
 
 SEARCH_RESULT_HEADER = "Search results for '{search_pattern}'\n"
+
+CSV_HEADERS = ["group_id", "movie_id", "movie_name", "duration", "watched", "imdb_rating", "size_in_gb"]

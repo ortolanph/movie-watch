@@ -22,7 +22,7 @@ INSERT_MOVIE = '''insert into movie (
                             imdb_rating, 
                             original_size, 
                             size_in_gb) 
-                  values (?, ?, ?,?, ?, ?, ?, ?, ?, ?) '''
+                  values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) '''
 
 SELECT_MOVIES = '''select watched, 
                           id, 

@@ -1,7 +1,11 @@
+import csv
+
 from art import tprint
 
+from lib.movies_constants import CSV_HEADERS
 from lib.movies_database import MovieRepository
 from lib.movies_reports import MovieReporter
+from lib.movies_utils import extract_csv_info
 
 
 class MovieController:
@@ -30,3 +34,12 @@ class MovieController:
 
     def change_watched_status(self, movie_id, watched=None):
         self._repository.change_movie_status(movie_id, watched)
+
+    def export_to_csv(self, csv_file_name):
+        all_movies = self._repository.list_all_movies()
+        all_movies_formatted = list(map(lambda movie: extract_csv_info(movie), all_movies))
+
+        with open(csv_file_name, 'w', encoding='UTF8', newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=CSV_HEADERS)
+            writer.writeheader()
+            writer.writerows(all_movies_formatted)

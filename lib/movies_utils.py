@@ -43,3 +43,15 @@ def extract_row_info(row):
         "imdb_rating": row[6],
         "size_in_gb": row[7]
     }
+
+
+def extract_csv_info(row):
+    return {
+        "watched": convert_to_flag(row["watched"]),
+        "group_id": row["group_id"],
+        "movie_id": row["movie_id"],
+        "movie_name": row["movie_name"],
+        "duration": convert_to_minutes(row["duration"]),
+        "imdb_rating": row["imdb_rating"],
+        "size_in_gb": row["size_in_gb"]
+    }

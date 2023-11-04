@@ -50,16 +50,16 @@ def unwatch(movie_id: int):
 
 
 @app.command(
-    help="Creates a CSV file of the movies",
-    short_help="Creates a CSV file of the movies"
+    help="Export data as CSV",
+    short_help="Export data as CSV"
 )
 def export_to_csv(csv_file_name: str):
-    print(f'{emoji.emojize(":construction_worker:")} Under Construction {emoji.emojize(":construction_worker:")}')
+    controller.export_to_csv(csv_file_name)
 
 
 @app.command(
-    help="Creates inserts file of the movie table",
-    short_help="Creates inserts file of the movie table"
+    help="Export data as SQL Inserts",
+    short_help="Export data as SQL Inserts"
 )
 def export_to_inserts(sql_file_name: str):
     print(f'{emoji.emojize(":construction_worker:")} Under Construction {emoji.emojize(":construction_worker:")}')

@@ -1,3 +1,5 @@
-typer[all]
-art
-emoji
+typer[all]~=0.9.0
+art~=6.1
+emoji~=2.8.0
+tqdm~=4.66.1
+jinja2
