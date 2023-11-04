@@ -3,3 +3,4 @@ art~=6.1
 emoji~=2.8.0
 tqdm~=4.66.1
 jinja2
+sqlescapy

@@ -35,6 +35,8 @@ SELECT_MOVIES = '''select watched,
                      from movie 
                     order by group_id, movie_id, id;'''
 
+SELECT_ALL_FIELDS_MOVIES = '''select * from movie order by group_id, movie_id, id;'''
+
 SELECT_MOVIES_BY_GROUP = '''select watched, 
                                    id, 
                                    group_id, 

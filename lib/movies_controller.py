@@ -1,8 +1,9 @@
 import csv
 
 from art import tprint
+from jinja2 import Template
 
-from lib.movies_constants import CSV_HEADERS
+from lib.movies_constants import CSV_HEADERS, SQL_INSERT_TEMPLATE_FILE
 from lib.movies_database import MovieRepository
 from lib.movies_reports import MovieReporter
 from lib.movies_utils import extract_csv_info
@@ -39,7 +40,18 @@ class MovieController:
         all_movies = self._repository.list_all_movies()
         all_movies_formatted = list(map(lambda movie: extract_csv_info(movie), all_movies))
 
-        with open(csv_file_name, 'w', encoding='UTF8', newline='') as f:
-            writer = csv.DictWriter(f, fieldnames=CSV_HEADERS)
+        with open(csv_file_name, 'w', encoding='UTF8', newline='') as csv_file:
+            writer = csv.DictWriter(csv_file, fieldnames=CSV_HEADERS)
             writer.writeheader()
             writer.writerows(all_movies_formatted)
+
+    def export_to_sql_insert(self, sql_file_name):
+        all_fields_movies = self._repository.list_all_fields_movies()
+
+        with open(SQL_INSERT_TEMPLATE_FILE) as template_file:
+            sql_template = Template(template_file.read())
+
+        rendered_sql_file = sql_template.render(movies=all_fields_movies)
+
+        with open(sql_file_name, 'w', encoding='UTF8', newline='') as sql_file:
+            sql_file.writelines(rendered_sql_file)

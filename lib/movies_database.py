@@ -1,7 +1,7 @@
 from lib.movies_connection_manager import ConnectionManager
 from lib.movies_sql import INSERT_MOVIE, SELECT_MOVIES, SELECT_MOVIES_BY_GROUP, \
-    SELECT_MOVIES_BY_PATTERN, UPDATE_MOVIE_AS_WATCHED, UPDATE_MOVIE_AS_UNWATCHED
-from lib.movies_utils import extract_row_info
+    SELECT_MOVIES_BY_PATTERN, UPDATE_MOVIE_AS_WATCHED, UPDATE_MOVIE_AS_UNWATCHED, SELECT_ALL_FIELDS_MOVIES
+from lib.movies_utils import extract_row_info, extract_all_fields_info
 
 DATABASE_FILE = "movies.sqlite3"
 SOURCE_DATA = "src/movies_all.csv"
@@ -69,3 +69,14 @@ class MovieRepository:
         self._connection.execute(statement, [movie_pk_id])
         self._connection.commit()
         self._close_connection()
+
+    def list_all_fields_movies(self):
+        cursor = self._connection.execute(SELECT_ALL_FIELDS_MOVIES)
+
+        movie_data = []
+        for row in cursor:
+            movie_data.append(extract_all_fields_info(row))
+
+        self._close_connection()
+
+        return movie_data

@@ -61,8 +61,8 @@ def export_to_csv(csv_file_name: str):
     help="Export data as SQL Inserts",
     short_help="Export data as SQL Inserts"
 )
-def export_to_inserts(sql_file_name: str):
-    print(f'{emoji.emojize(":construction_worker:")} Under Construction {emoji.emojize(":construction_worker:")}')
+def export_to_sql(sql_file_name: str):
+    controller.export_to_sql_insert(sql_file_name)
 
 
 @app.command(

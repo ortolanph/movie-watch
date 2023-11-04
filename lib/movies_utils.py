@@ -1,5 +1,7 @@
 from datetime import timedelta
 
+from sqlescapy import sqlescape
+
 
 def convert_to_watched(watched):
     if watched == "TRUE":
@@ -42,6 +44,21 @@ def extract_row_info(row):
         "duration": format_duration(row[5]),
         "imdb_rating": row[6],
         "size_in_gb": row[7]
+    }
+
+
+def extract_all_fields_info(row):
+    return {
+        "group_id": row[1],
+        "movie_id": row[2],
+        "movie_name": sqlescape(row[3]),
+        "movie_year": row[4],
+        "file_name": sqlescape(row[5]),
+        "duration": row[6],
+        "watched": row[7],
+        "imdb_rating": row[8],
+        "original_size": row[9],
+        "size_in_gb": row[10]
     }
 
 
