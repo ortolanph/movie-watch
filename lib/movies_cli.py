@@ -1,4 +1,3 @@
-import emoji
 import typer
 
 from lib.movies_controller import MovieController
@@ -55,6 +54,7 @@ def unwatch(movie_id: int):
 )
 def export_to_csv(csv_file_name: str):
     controller.export_to_csv(csv_file_name)
+    print(f"Export completed! Check {csv_file_name} file.")
 
 
 @app.command(
@@ -63,6 +63,7 @@ def export_to_csv(csv_file_name: str):
 )
 def export_to_sql(sql_file_name: str):
     controller.export_to_sql_insert(sql_file_name)
+    print(f"Export completed! Check {sql_file_name} file.")
 
 
 @app.command(
@@ -70,7 +71,7 @@ def export_to_sql(sql_file_name: str):
     short_help="Inserts a movie from a json file"
 )
 def insert_movie(movie_file: str):
-    print(f'{emoji.emojize(":construction_worker:")} Under Construction {emoji.emojize(":construction_worker:")}')
+    controller.insert_movie(movie_file)
 
 
 @app.command(
@@ -79,3 +80,4 @@ def insert_movie(movie_file: str):
 )
 def purge():
     controller.purge()
+    print("All watched movies purged")

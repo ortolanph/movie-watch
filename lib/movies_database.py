@@ -1,7 +1,7 @@
 from lib.movies_connection_manager import ConnectionManager
 from lib.movies_sql import INSERT_MOVIE, SELECT_MOVIES, SELECT_MOVIES_BY_GROUP, \
     SELECT_MOVIES_BY_PATTERN, UPDATE_MOVIE_AS_WATCHED, UPDATE_MOVIE_AS_UNWATCHED, SELECT_ALL_FIELDS_MOVIES, \
-    PURGE_WATCHED_MOVIE
+    PURGE_WATCHED_MOVIE, LAST_GROUP_ID
 from lib.movies_utils import extract_row_info, extract_all_fields_info
 
 DATABASE_FILE = "movies.sqlite3"
@@ -20,8 +20,7 @@ class MovieRepository:
         self._connection = None
 
     def insert_movie(self, group_id, movie_id, movie_name, movie_year, file_name, duration, watched, imdb_rating,
-                     file_size,
-                     size_in_gb):
+                     file_size, size_in_gb):
         cursor = self._connection.cursor()
 
         cursor.execute(INSERT_MOVIE, (
@@ -86,3 +85,10 @@ class MovieRepository:
         self._connection.execute(PURGE_WATCHED_MOVIE)
         self._connection.commit()
         self._close_connection()
+
+    def next_movie_id(self, group_id):
+        cursor = self._connection.execute(LAST_GROUP_ID, [group_id])
+
+        next_movie_id = cursor.fetchone()[0] + 1
+
+        return next_movie_id

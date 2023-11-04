@@ -1,3 +1,4 @@
+import os
 from datetime import timedelta
 
 from sqlescapy import sqlescape
@@ -71,4 +72,34 @@ def extract_csv_info(row):
         "duration": convert_to_minutes(row["duration"]),
         "imdb_rating": row["imdb_rating"],
         "size_in_gb": row["size_in_gb"]
+    }
+
+
+def remove_path(file_name: str):
+    return file_name.split(os.sep).pop()
+
+
+def get_file_size(file_name):
+    return os.stat(file_name).st_size
+
+
+def format_to_gb(file_size):
+    return float(("{:.2f}".format(file_size / (1024 * 1024 * 1024))))
+
+
+def create_movie_data(movie_file_data):
+    file_size = get_file_size(movie_file_data["filename"])
+    file_size_in_gb = format_to_gb(file_size)
+
+    return {
+        "group_id": movie_file_data["group"],
+        "movie_name": sqlescape(movie_file_data["name"]),
+        "movie_id": 0,
+        "movie_year": movie_file_data["year"],
+        "file_name": sqlescape(remove_path(movie_file_data["filename"])),
+        "duration": movie_file_data["duration"],
+        "watched": 0,
+        "imdb_rating": movie_file_data["imdb_rating"],
+        "original_size": file_size,
+        "size_in_gb": file_size_in_gb
     }

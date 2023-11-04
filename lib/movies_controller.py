@@ -1,4 +1,5 @@
 import csv
+import json
 
 from art import tprint
 from jinja2 import Template
@@ -6,7 +7,7 @@ from jinja2 import Template
 from lib.movies_constants import CSV_HEADERS, SQL_INSERT_TEMPLATE_FILE
 from lib.movies_database import MovieRepository
 from lib.movies_reports import MovieReporter
-from lib.movies_utils import extract_csv_info
+from lib.movies_utils import extract_csv_info, create_movie_data
 
 
 class MovieController:
@@ -58,3 +59,28 @@ class MovieController:
 
     def purge(self):
         self._repository.purge_watched_movies()
+
+    def insert_movie(self, movie_file):
+        with open(movie_file) as json_file:
+            movie_file_data = json.load(json_file)
+
+        movie_data = create_movie_data(movie_file_data)
+
+        next_movie_id = self._repository.next_movie_id(movie_data["group_id"])
+
+        movie_data["movie_id"] = next_movie_id
+
+        self._repository.insert_movie(
+            movie_data["group_id"],
+            movie_data["movie_id"],
+            movie_data["movie_name"],
+            movie_data["movie_year"],
+            movie_data["file_name"],
+            movie_data["duration"],
+            movie_data["watched"],
+            movie_data["imdb_rating"],
+            movie_data["original_size"],
+            movie_data["size_in_gb"],
+        )
+
+        print("Movie inserted with success!")
