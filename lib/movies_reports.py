@@ -1,3 +1,5 @@
+import emoji
+
 from lib.movies_constants import GROUP_LIST_HEADER, GROUP_LIST_HEADER_SEPARATOR, RECORD_FORMAT, GROUP_HEADER, \
     SEARCH_RESULT_HEADER
 from lib.movies_utils import convert_to_minutes, convert_to_flag, format_duration
@@ -62,16 +64,16 @@ class MovieReporter:
         not_watched_movies = len(list(filter(lambda x: x[0] == 0, status_tuple_array)))
         progress = ((watched_movies / len(status_tuple_array)) * 100)
 
-        print("\nStatus\n")
-        print("-[ TIME ]-------------------------------------------------------------------------")
+        print(f"\n{emoji.emojize(':bar_chart:')} Status\n")
+        print(f"-[ {emoji.emojize(':mantelpiece_clock:')} TIME ]-------------------------------------------------------------------------")
         print(f"Total Duration .....: {total_duration}")
         print(f"Watched Time .......: {watched_time}")
         print(f"Time Left ..........: {time_left}")
-        print("\n-[ Size ]-------------------------------------------------------------------------")
+        print(f"\n-[ {emoji.emojize(':computer_disk:')} Size ]-------------------------------------------------------------------------")
         print("Total Size ..........: {:>7.2f}".format(total_size))
         print("Consumed GB .........: {:>7.2f}".format(consumed_gb))
         print("Left GB .............: {:>7.2f}".format(left_gb))
-        print("\n-[ Watched Movies ]---------------------------------------------------------------")
+        print(f"\n-[ {emoji.emojize(':movie_camera:')} Watched Movies ]---------------------------------------------------------------")
         print("Watched .............: {:>7.0f}".format(watched_movies))
         print("Not Watched .........: {:>7.0f}".format(not_watched_movies))
         print("Progress ............: {:>7.2f} %".format(progress))

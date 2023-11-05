@@ -1,3 +1,4 @@
+import emoji
 import typer
 
 from lib.movies_controller import MovieController
@@ -36,16 +37,16 @@ def search(pattern: str):
 )
 def watched(movie_id: int):
     controller.change_watched_status(movie_id, watched=True)
-    print(f"Movie {movie_id} has been marked as watched")
+    print(f"Movie {movie_id} has been marked as watched {emoji.emojize(':check_mark_button:')}")
 
 
 @app.command(
     help="Marks a given movie as watched by group_id and movie_id",
     short_help="Marks a given movie as watched by group_id and movie_id"
 )
-def watched_gm(group_id: int, movie_id):
+def watched_gm(group_id: int, movie_id: int):
     controller.change_watched_status_gm(group_id, movie_id, watched=True)
-    print(f"Movie {group_id}/{movie_id} has been marked as watched")
+    print(f"Movie {group_id}/{movie_id} has been marked as watched {emoji.emojize(':check_mark_button:')}")
 
 
 @app.command(
@@ -54,16 +55,16 @@ def watched_gm(group_id: int, movie_id):
 )
 def unwatch(movie_id: int):
     controller.change_watched_status(movie_id, watched=False)
-    print(f"Movie {movie_id} has been marked as unwatched")
+    print(f"Movie {movie_id} has been marked as unwatched {emoji.emojize(':cross_mark:')}")
 
 
 @app.command(
     help="Marks a given movie as unwatched by group_id and movie_id",
     short_help="Marks a given movie as unwatched by group_id and movie_id"
 )
-def unwatch_gm(group_id: int, movie_id):
+def unwatch_gm(group_id: int, movie_id: int):
     controller.change_watched_status_gm(group_id, movie_id, watched=False)
-    print(f"Movie {group_id}/{movie_id}{movie_id} has been marked as unwatched")
+    print(f"Movie {group_id}/{movie_id}{movie_id} has been marked as unwatched {emoji.emojize(':cross_mark:')}")
 
 
 @app.command(
@@ -72,7 +73,7 @@ def unwatch_gm(group_id: int, movie_id):
 )
 def export_to_csv(csv_file_name: str):
     controller.export_to_csv(csv_file_name)
-    print(f"Export completed! Check {csv_file_name} file.")
+    print(f"Export completed! Check {csv_file_name} file {emoji.emojize(':memo:')}.")
 
 
 @app.command(
@@ -81,7 +82,7 @@ def export_to_csv(csv_file_name: str):
 )
 def export_to_sql(sql_file_name: str):
     controller.export_to_sql_insert(sql_file_name)
-    print(f"Export completed! Check {sql_file_name} file.")
+    print(f"Export completed! Check {sql_file_name} file {emoji.emojize(':memo:')}.")
 
 
 @app.command(
@@ -90,6 +91,7 @@ def export_to_sql(sql_file_name: str):
 )
 def insert_movie(movie_file: str):
     controller.insert_movie(movie_file)
+    print(f"New movie inserted {emoji.emojize('::page_with_curl::')}.")
 
 
 @app.command(
@@ -98,4 +100,14 @@ def insert_movie(movie_file: str):
 )
 def purge():
     controller.purge()
-    print("All watched movies purged")
+    print(f"All watched movies purged {emoji.emojize(':collision:')}")
+
+
+@app.command(
+    help="Moves a movie to different group",
+    short_help="Moves a movie to different group",
+)
+def move(source_group_id: int, movie_id: int, target_group_id: int):
+    print(f'{emoji.emojize(":construction_worker:")} Under Construction {emoji.emojize(":construction_worker:")}')
+    print(f"Movie {movie_id} moved from group {source_group_id} {emoji.emojize(':backhand_index_pointing_right:')} "
+          f"moved to group {target_group_id} {emoji.emojize(':backhand_index_pointing_left:')}")
