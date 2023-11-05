@@ -107,7 +107,7 @@ def purge():
     help="Moves a movie to different group",
     short_help="Moves a movie to different group",
 )
-def move(source_group_id: int, movie_id: int, target_group_id: int):
-    print(f'{emoji.emojize(":construction_worker:")} Under Construction {emoji.emojize(":construction_worker:")}')
+def move(movie_id: int, source_group_id: int, target_group_id: int):
+    controller.move(movie_id, source_group_id, target_group_id)
     print(f"Movie {movie_id} moved from group {source_group_id} {emoji.emojize(':backhand_index_pointing_right:')} "
           f"moved to group {target_group_id} {emoji.emojize(':backhand_index_pointing_left:')}")

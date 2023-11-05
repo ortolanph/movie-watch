@@ -2,7 +2,7 @@ from lib.movies_connection_manager import ConnectionManager
 from lib.movies_sql import INSERT_MOVIE, SELECT_MOVIES, SELECT_MOVIES_BY_GROUP, \
     SELECT_MOVIES_BY_PATTERN, UPDATE_MOVIE_AS_WATCHED_BY_ID, UPDATE_MOVIE_AS_UNWATCHED_BY_ID, SELECT_ALL_FIELDS_MOVIES, \
     PURGE_WATCHED_MOVIE, LAST_GROUP_ID, UPDATE_MOVIE_AS_WATCHED_BY_GROUP_ID_MOVIE_ID, \
-    UPDATE_MOVIE_AS_UNWATCHED_BY_GROUP_ID_MOVIE_ID
+    UPDATE_MOVIE_AS_UNWATCHED_BY_GROUP_ID_MOVIE_ID, MOVE_MOVIE
 from lib.movies_utils import extract_row_info, extract_all_fields_info
 
 DATABASE_FILE = "movies.sqlite3"
@@ -101,3 +101,8 @@ class MovieRepository:
         next_movie_id = cursor.fetchone()[0] + 1
 
         return next_movie_id
+
+    def change_group(self, target_group_id, next_movie_id, source_group_id, movie_id):
+        self._connection.execute(MOVE_MOVIE, [target_group_id, next_movie_id, source_group_id, movie_id])
+        self._connection.commit()
+        self._close_connection()

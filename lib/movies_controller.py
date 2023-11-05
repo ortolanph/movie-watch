@@ -87,3 +87,10 @@ class MovieController:
         )
 
         print("Movie inserted with success!")
+
+    def move(self, movie_id, source_group_id, target_group_id):
+        next_movie_id = self._repository.next_movie_id(target_group_id)
+
+        self._repository.change_group(target_group_id, next_movie_id, source_group_id, movie_id)
+
+        pass

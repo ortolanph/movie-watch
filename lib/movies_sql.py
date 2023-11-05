@@ -74,3 +74,5 @@ PURGE_WATCHED_MOVIE = 'delete from movie where watched = 1'
 LAST_GROUP_ID = '''select coalesce(max(movie_id), 0) as last_id
                      from movie
                     where group_id = ?'''
+
+MOVE_MOVIE = "update movie set group_id = ?, movie_id = ? where group_id = ? and movie_id = ?"
