@@ -1,0 +1,4 @@
+{% for movie in movies %}
+INSERT INTO movie (group_id, movie_id, movie_name, movie_year, file_name, duration, watched, imdb_rating, original_size, size_in_gb)
+     VALUES ({{ movie.group_id }}, {{ movie.movie_id }}, '{{ movie.movie_name }}', {{ movie.movie_year }}, '{{ movie.file_name }}', {{ movie.duration }}, {{ movie.watched }}, {{ movie.imdb_rating }}, {{ movie.original_size }}, {{ movie.size_in_gb }});
+{% endfor %}
