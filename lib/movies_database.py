@@ -1,3 +1,4 @@
+""" Database module. """
 from lib.movies_connection_manager import ConnectionManager
 from lib.movies_sql import INSERT_MOVIE, SELECT_MOVIES, SELECT_MOVIES_BY_GROUP, \
     SELECT_MOVIES_BY_PATTERN, UPDATE_MOVIE_AS_WATCHED_BY_ID, UPDATE_MOVIE_AS_UNWATCHED_BY_ID, SELECT_ALL_FIELDS_MOVIES, \

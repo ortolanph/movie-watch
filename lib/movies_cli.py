@@ -1,3 +1,4 @@
+""" CLI Module """
 import emoji
 import typer
 

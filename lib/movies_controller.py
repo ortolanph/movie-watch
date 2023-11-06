@@ -1,3 +1,4 @@
+""" Controller module. It will interoperate with the Repository and the Reporter """
 import csv
 import json
 

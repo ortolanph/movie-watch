@@ -1,3 +1,4 @@
+""" Utils module. Common functions that are used in the whole project. """
 import os
 from datetime import timedelta
 

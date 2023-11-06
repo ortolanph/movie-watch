@@ -1,3 +1,4 @@
+""" Reporter module """
 import emoji
 
 from lib.movies_constants import GROUP_LIST_HEADER, GROUP_LIST_HEADER_SEPARATOR, RECORD_FORMAT, GROUP_HEADER, \
