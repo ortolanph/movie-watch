@@ -7,11 +7,15 @@ from lib.movies_utils import convert_to_minutes, convert_to_flag, format_duratio
 
 
 class MovieReporter:
+    """ Reporter Class """
+
     def _print_headers(self):
+        """ Print essential headers """
         print(GROUP_LIST_HEADER)
         print(GROUP_LIST_HEADER_SEPARATOR)
 
     def print_group(self, group_number, group_data):
+        """ Print group """
         print(GROUP_HEADER.format(group_number))
 
         self._print_headers()
@@ -24,6 +28,7 @@ class MovieReporter:
         self._print_summary(group_data)
 
     def print_all_movies(self, movie_data):
+        """ Print all movies """
         groups = list(set(movie_item["group_id"] for movie_item in movie_data))
 
         print("All Movies\n")
@@ -36,6 +41,7 @@ class MovieReporter:
         self._print_summary(movie_data)
 
     def print_search_results(self, pattern, search_results):
+        """ Print the search results """
         print(SEARCH_RESULT_HEADER.format(search_pattern=pattern))
 
         self._print_headers()
@@ -47,6 +53,7 @@ class MovieReporter:
                                        search_result["imdb_rating"], search_result["size_in_gb"]))
 
     def _print_summary(self, data):
+        """ Prints summary every group end """
         status_tuple_array = list(
             (convert_to_flag(data_item["watched"]), convert_to_minutes(data_item["duration"]), data_item["size_in_gb"])
             for data_item in data)
