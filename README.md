@@ -8,8 +8,22 @@ The movies are divided into groups. Each movie has a group id and a movie id and
 
 ## Commands
 
-* **export-to-csv**: Export data as CSV
-* **export-to-sql**: Export data as SQL Inserts
+
+### **export-to-csv**: 
+
+Export data as CSV
+
+Example:
+
+```commandline
+movies export-to-csv path/to/file_name.csv
+```
+
+### **export-to-sql**:
+
+Export data as SQL Inserts
+
+
 * **insert-movie**: Inserts a movie from a json file
 * **list-all**: Lists all movies summarizing them at the end
 * **list-group**: List all movies from a group summarizing them at the end│
