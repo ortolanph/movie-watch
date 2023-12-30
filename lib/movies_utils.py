@@ -83,7 +83,8 @@ def _get_file_size(file_name):
 
 def _format_to_gb(file_size):
     """ Format the original file size into GB of two digit """
-    return float(f"{format(file_size / (1024 * 1024 * 1024)):.2f}")
+    file_size_gb = file_size / (1024 * 1024 * 1024)
+    return float(f"{file_size_gb:.2f}")
 
 
 def create_movie_data(movie_file_data):
