@@ -1,0 +1,69 @@
+group_id,movie_id,movie_name,duration,watched,imdb_rating,size_in_gb
+1,11,Sweet November,119,0,6.7,1.37
+1,12,Love Story,99,0,6.9,0.68
+2,2,A Walk in the Clouds,102,0,6.7,1.18
+2,4,Bitter Moon,139,0,6.9,0.91
+2,8,Pride And Prejudice,127,0,7.8,1.11
+2,14,The Sea Of Trees,110,0,6.1,0.76
+3,4,Autumn Sonata,99,0,8.1,1.55
+3,5,Boogie Nights,155,0,7.9,0.68
+3,6,Breakfast at Tiffany's,115,0,7.6,0.88
+3,7,Breaking the Waves,159,0,7.8,0.97
+3,11,Dancer in the Dark,140,0,7.9,2.29
+3,13,House of Sand and Fog,126,0,7.5,0.73
+3,15,Midnight Cowboy,113,0,7.8,0.68
+4,3,Damage,111,0,6.7,0.7
+4,4,Day for Night,115,0,8.0,0.68
+4,5,Erin Brockovich,131,0,7.4,0.68
+4,7,In Bruges,107,0,7.9,0.64
+4,8,The Big Sick,120,0,7.5,1.39
+4,9,The Hidden Fortress,139,0,8.1,1.34
+5,1,Boyhood,163,0,7.9,0.98
+5,2,Children of Men,109,0,7.9,1.5
+5,3,Contagion,106,0,6.8,0.64
+5,5,Mistress America,84,0,6.7,0.65
+5,6,Moonstruck,102,0,7.1,0.59
+5,7,Rear Window,112,0,8.5,1.08
+5,8,Shampoo,109,0,6.4,1.79
+5,9,Silence,161,0,7.2,1.18
+5,10,Songs From the Second Floor,100,0,7.5,0.89
+5,11,The Bad and The Beautiful,118,0,7.8,3.84
+5,12,The City Of Lost Children,112,0,7.5,0.68
+5,13,The Game,129,0,7.7,0.85
+5,14,The Guard,96,0,7.3,0.63
+5,15,Freaks,64,0,7.8,1.85
+6,1,Delicatessen,99,0,7.5,1.72
+6,2,Fanny and och Alexander,312,0,8.1,0.7
+6,3,In The Name Of The Father,133,0,8.1,0.72
+6,4,Murder by Death,94,0,7.3,0.52
+6,5,Phantom of the Opera,107,0,7.5,0.43
+6,6,Stereo,65,0,5.1,0.68
+6,7,Swimming Pool,99,0,6.7,1.05
+6,8,Tetro,127,0,6.8,0.68
+6,9,The Aerial,99,0,7.3,1.29
+6,10,The Court Jester,101,0,7.8,0.69
+6,11,The English Patient,162,0,7.4,0.97
+6,12,The Science Of Sleep,106,0,7.2,0.67
+6,13,The Whales Of August,90,0,7.1,4.0
+6,14,Vertigo,128,0,8.3,0.9
+6,15,With Honors,103,0,6.7,0.68
+7,1,Fiddler On The Roof,201,0,8.0,0.68
+7,2,Firestarter,114,0,6.0,1.84
+7,3,How to Steal a Million,123,0,7.5,0.52
+7,4,I'm Not There,135,0,6.8,1.26
+7,5,In the Heart of the Sea,121,0,6.9,0.97
+7,6,Love,130,0,6.1,1.42
+7,7,Mr. Nobody,138,0,7.7,0.98
+7,8,The Artist,100,0,7.9,0.64
+7,9,The Bridge on the River Kwai,161,0,8.1,0.97
+7,10,The Grey,117,0,6.7,0.73
+7,11,The Nice Guys,116,0,7.4,0.68
+7,12,This Must Be the Place,118,0,6.7,0.73
+7,13,Throne of Blood,110,0,8.1,1.36
+7,15,Tree Of Life,138,0,6.8,1.41
+8,1,The Unbearable Weight Of Massive Talent,105,0,7.0,1.97
+8,2,Blue is the Warmest Color,180,0,7.7,3.4
+8,3,Demolition,100,0,7.0,2.79
+8,6,The Purple Rose of Cairo,82,0,7.7,4.7
+8,8,Past Lives,105,0,8.0,1.4
+8,10,The Holdovers,133,0,8.0,1.6
