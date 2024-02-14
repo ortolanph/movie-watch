@@ -1,0 +1,151 @@
+"""
+Movie type with all essential information
+"""
+type Movie {
+    """ The Movie unique id """
+    id: Int
+    """ As the movies are grouped, then it was necessary """
+    group_id: Int
+    """ The movie id inside the group """
+    movie_id: Int
+    """ The movie name """
+    movie_name: String
+    """ The movie release year """
+    movie_year: Int
+    """ The duration in minutes """
+    duration_min: Int
+    """ The formatted duration """
+    formatted_duration: String
+    """ Marks the movie has been watched or not """
+    watched: Boolean
+    """ Size of the file in GB """
+    size_in_gb: Float
+}
+
+""" Collected duration statistics """
+type DurationStatistics {
+    """ Total duration in days (X Days HH:MM:SS.mmmm) """
+    total_duration_days: String
+    """ Total watched time in days (X Days HH:MM:SS.mmmm) """
+    total_watched_time_days: String
+    """ Time left in days (X Days HH:MM:SS.mmmm) """
+    time_left_days: String
+}
+
+""" Collected size statistics """
+type SizeStatistics {
+    """ Total size (GB) """
+    total_size_gb: Float
+    """ Total GB consumed """
+    total_consumed_float: Float
+    """ Sum of the remaining file sizes """
+    total_left_gb: Float
+}
+
+""" Collected watched statistics """
+type WatchedStatistics {
+    """ Total of watched movies """
+    total_watched_movies: Int
+    """ Total of not watched movies """
+    total_not_watched_movies: Int
+    """ Progress of watched not watched movies """
+    progress: Float
+}
+
+""" Collected statistics """
+type Statistics {
+    """ The collected durations statistics """
+    duration_statistics: DurationStatistics
+    """ The collected size statistics """
+    size_statistics: SizeStatistics
+    """ the collected watched statistics """
+    watched_statistics: WatchedStatistics
+}
+
+""" Results of the Movie Group """
+type MovieGroupResult {
+    """ Movies in the group """
+    movies: [Movie]
+    """ Statistics for the group """
+    statistics: Statistics
+}
+
+""" Results of the Movie Group """
+type MovieSearchResult {
+    """ List of movies returned """
+    movies: [Movie]
+    """ The pattern used on the search """
+    pattern: String
+    """ Total movies in the search """
+    total_movies: Int
+}
+
+""" General result """
+type MovieGeneralResult {
+    """ Group results """
+    group_results: [MovieGroupResult]
+    """ All time statistics """
+    statistics: Statistics
+}
+
+""" Exporting type Enum """
+enum ExportType {
+    """ CSV file """
+    CSV_FILE
+    """ SQL file """
+    SQL_FILE
+    """ JSON file """
+    JSON_FILE
+}
+
+""" Results of exporting """
+type ExportResults {
+    """ Exported file type """
+    export_type: ExportType
+    """ The file path """
+    file_path: String
+    """ The file size """
+    file_size: Float
+}
+
+""" All queries """
+type Query {
+    """ Lists all movies """
+    all: MovieGeneralResult
+    """ Lists all groups """
+    group(group_id: Int!): MovieGroupResult
+    """ Perform a search """
+    search(pattern: String): MovieSearchResult
+}
+
+""" Input model to add a movie to the database """
+input MovieInput {
+    """ The desired group id """
+    group_id: Int!
+    """ The movie name """
+    movie_name: String
+    """ The movie year """
+    movie_year: Int
+    """ The movie file name """
+    file_name: String
+    """ The movie duration """
+    duration: Int
+    """ The IMDB rating """
+    imdb_rating: Float
+}
+
+""" All Mutations"""
+type Mutation {
+    """ Mark a movie as watched """
+    markAsWatched(movie_id: Int, group_id: Int): Movie
+    """ Mark movie as unwatched """
+    markAsUnwatched(movie_id: Int, group_id: Int): Movie
+    """ Adds a movie to the database """
+    addMovie(input: MovieInput): Movie
+    """ Exports the database to a given format """
+    export(file_name: String, export_to: ExportType): ExportResults
+    """ Move a movie from one group to another """
+    move(movie_id: Int, source_group: Int, target_group: Int): Movie
+    """ Purge all watched movies """
+    purge: [Movie]
+}
